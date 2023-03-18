@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediatR.Sample.App", "MyMediatR.Sample.App\MyMediatR.Sample.App.csproj", "{916F0272-E67A-4DEC-A53F-90F6EB589047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediatR.Sample.Notification", "MyMediatR.Sample.Notification\MyMediatR.Sample.Notification.csproj", "{7A871F56-5C61-4D80-A803-F1AC55032023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediatR.Sample.Command", "MyMediatR.Sample.Command\MyMediatR.Sample.Command.csproj", "{3FAFD455-C8D0-4430-9C49-2391E1E04D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediatR.Sample.Stream", "MyMediatR.Sample.Stream\MyMediatR.Sample.Stream.csproj", "{517F71C4-7FF5-4E4E-BADF-1098C94BE2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMediatR.Sample.CommandImpl", "MyMediatR.Sample.CommandImpl\MyMediatR.Sample.CommandImpl.csproj", "{575A8B94-5977-456C-B040-997E57E22477}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{916F0272-E67A-4DEC-A53F-90F6EB589047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916F0272-E67A-4DEC-A53F-90F6EB589047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916F0272-E67A-4DEC-A53F-90F6EB589047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916F0272-E67A-4DEC-A53F-90F6EB589047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A871F56-5C61-4D80-A803-F1AC55032023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A871F56-5C61-4D80-A803-F1AC55032023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A871F56-5C61-4D80-A803-F1AC55032023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A871F56-5C61-4D80-A803-F1AC55032023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FAFD455-C8D0-4430-9C49-2391E1E04D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FAFD455-C8D0-4430-9C49-2391E1E04D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FAFD455-C8D0-4430-9C49-2391E1E04D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FAFD455-C8D0-4430-9C49-2391E1E04D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{517F71C4-7FF5-4E4E-BADF-1098C94BE2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517F71C4-7FF5-4E4E-BADF-1098C94BE2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517F71C4-7FF5-4E4E-BADF-1098C94BE2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517F71C4-7FF5-4E4E-BADF-1098C94BE2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575A8B94-5977-456C-B040-997E57E22477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575A8B94-5977-456C-B040-997E57E22477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575A8B94-5977-456C-B040-997E57E22477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575A8B94-5977-456C-B040-997E57E22477}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

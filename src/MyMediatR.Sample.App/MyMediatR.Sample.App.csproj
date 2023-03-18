@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-MyMediatR.Sample.App-0e648134-5787-4691-a042-74b0296b0bae</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyMediatR.Sample.Command\MyMediatR.Sample.Command.csproj" />
+    <ProjectReference Include="..\MyMediatR.Sample.Notification\MyMediatR.Sample.Notification.csproj" />
+    <ProjectReference Include="..\MyMediatR.Sample.Stream\MyMediatR.Sample.Stream.csproj" />
+    <ProjectReference Include="..\MyMediatR.Sample.CommandImpl\MyMediatR.Sample.CommandImpl.csproj" />
+  </ItemGroup>
+</Project>
