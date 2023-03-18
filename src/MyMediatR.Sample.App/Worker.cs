@@ -18,48 +18,36 @@ public class Worker : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        string message = "Hello MediatR";
+        const string msg = "Hello MediatR";
 
         // Send Command
-        await SendCommand(message);
+        await SendCommand(msg);
 
         // Stream
-        // await CreateStream(message);
+        await CreateStream(msg);
 
         // Public Notificsation
-        // await PublishNotification(message);
+        await PublishNotification(msg);
     }
 
-    private async Task SendCommand(string message)
+    private async Task SendCommand(string msg)
     {
-        SampleCommand command = new()
-        {
-            Message = message
-        };
-        // Console.WriteLine("Start Command Sample.");
+        SampleCommand command = new(msg);
         await _mediator.Send(command).ConfigureAwait(false);
-        // Console.WriteLine("Finish Command Sample.");
     }
 
-    private async Task CreateStream(string message)
+    private async Task CreateStream(string msg)
     {
-        SampleStream aeCommand = new();
-        // Console.WriteLine("Start Stream Sample.");
-        await foreach (var aeMessage in _mediator.CreateStream(aeCommand))
+        SampleStream aeCommand = new(msg);
+        await foreach (var streamMessage in _mediator.CreateStream(aeCommand))
         {
-            Console.WriteLine($"{message} : {aeMessage}");
+            _logger.LogInformation("Stream Sample : {Message}", streamMessage);
         }
-        // Console.WriteLine("Finish Stream Sample.");
     }
 
-    private async Task PublishNotification(string message)
+    private async Task PublishNotification(string msg)
     {
-        SampleNotification notification = new()
-        {
-            Message = message
-        };
-        // Console.WriteLine("Start Notification Sample.");
+        SampleNotification notification = new(msg);
         await _mediator.Publish(notification).ConfigureAwait(false);
-        // Console.WriteLine("Finish Notification Sample.");
     }
 }
