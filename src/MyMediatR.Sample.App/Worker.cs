@@ -9,11 +9,13 @@ public class Worker : BackgroundService
 {
     private readonly ILogger<Worker> _logger;
     private readonly IMediator _mediator;
+    private readonly IHostApplicationLifetime _hostApplicationLifetime;
 
-    public Worker(ILogger<Worker> logger, IMediator mediator)
+    public Worker(ILogger<Worker> logger, IMediator mediator, IHostApplicationLifetime hostApplicationLifetime)
     {
         _logger = logger;
         _mediator = mediator;
+        _hostApplicationLifetime = hostApplicationLifetime;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -28,6 +30,8 @@ public class Worker : BackgroundService
 
         // Public Notificsation
         await PublishNotification(msg);
+
+        _hostApplicationLifetime.StopApplication();
     }
 
     private async Task SendCommand(string msg)
